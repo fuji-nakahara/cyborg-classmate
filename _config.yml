@@ -50,6 +50,7 @@ defaults:
 # Theme settings
 homepage: "https://fuji-nakahara.github.io/"
 google_analytics: UA-118273401-1
+reverse_posts_order: true
 show_excerpts: false
 show_date: false
 date_format: "%Y年%m月%d日"
