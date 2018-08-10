@@ -22,10 +22,8 @@ timezone: Asia/Tokyo
 lang: ja_JP
 
 # Build settings
-markdown: kramdown
+markdown: FujiMarkdown
 theme: jekyll-theme-fuji
-plugins:
-  - jekyll/ruby_converter
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

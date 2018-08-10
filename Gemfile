@@ -18,7 +18,7 @@ gem 'jekyll-theme-fuji', git: 'https://github.com/fuji-nakahara/jekyll-theme-fuj
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-ruby_converter'
+  gem 'jekyll-fuji_markdown'
 end
 
 group :test do
