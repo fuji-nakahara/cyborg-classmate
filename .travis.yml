@@ -13,7 +13,7 @@ cache: bundler
 
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --url-swap '\A\/real-cyborg:' --disable-external
+  - bundle exec htmlproofer ./_site --url-swap '\A\/cyborg-classmate:' --disable-external
 
 branches:
   only:
