@@ -57,6 +57,10 @@ show_excerpts: false
 show_date: false
 date_format: "%Y年%m月%d日"
 
+# SEO
+twitter:
+  username: fuji_nakahara
+
 # Ebook settings
 ebook:
   file_name: cyborg-classmate

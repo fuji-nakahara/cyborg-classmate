@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/fuji-nakahara/jekyll-theme-fuji.git
-  revision: 2456f78d8071b02f7b3de8852723b4e232e8b18c
+  revision: ecb460718e4c6d67c3b54033c5e51fbe1a5933ef
   specs:
     jekyll-theme-fuji (0.1.0)
       jekyll (~> 3.8)
