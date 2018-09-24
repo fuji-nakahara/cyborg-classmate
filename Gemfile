@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll', '~> 3.8.3'
+gem 'jekyll', '~> 3.8'
 
 gem 'jekyll-theme-fuji', git: 'https://github.com/fuji-nakahara/jekyll-theme-fuji.git'
 
@@ -19,6 +19,7 @@ gem 'jekyll-theme-fuji', git: 'https://github.com/fuji-nakahara/jekyll-theme-fuj
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-fuji_markdown'
+  gem 'jekyll-build-ebook'
 end
 
 group :test do

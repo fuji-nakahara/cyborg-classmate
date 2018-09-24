@@ -18,6 +18,7 @@ description: ぼくがサイボーグのクラスメイト「ケイ」と過ご�
 author: フジ・ナカハラ
 baseurl: /cyborg-classmate # the subpath of your site, e.g. /blog
 url: https://fuji-nakahara.github.io # the base hostname & protocol for your site, e.g. http://example.com
+version: v1.0.0
 timezone: Asia/Tokyo
 lang: ja_JP
 
@@ -50,7 +51,13 @@ defaults:
 homepage: https://fuji-nakahara.github.io/
 repository: fuji-nakahara/cyborg-classmate
 google_analytics: UA-118273401-1
+show_ebooks_from_github_releases: true
 reverse_posts_order: true
 show_excerpts: false
 show_date: false
 date_format: "%Y年%m月%d日"
+
+# Ebook settings
+ebook:
+  file_name: cyborg-classmate
+  page_progression_direction: rtl

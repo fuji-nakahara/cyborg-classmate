@@ -14,17 +14,28 @@ cache: bundler
 script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --url-swap '\A\/cyborg-classmate:' --disable-external
+  - bundle exec jekyll build-ebook --kindle
 
 branches:
   only:
     - master
+    - /^v\d+\.\d+\.\d+$/
 
 deploy:
-  provider: pages
-  github-token:
-    secure: HVOvhW7jqmYHaY9Uj2ULAIjhnN0DzqYIDddEodgRoq+NTCicsavF7bqwCmFE9Z5x6FSqTUV3Nllcbgb7fJwAUeUzq2lHCjlDAbjMJfpirtGVKO0UFkYozugtIJlZwKU/u4fkkakz5w7kYKJEdJR+pAfLVslTzmmnKfg2Fbf2PLZQ8PyCI3UVvZxIEWC3iR+yQmXQVe4i8chu8l6WkT3Y2qtTOCB21ETexuRjUzU7NnHyxbBbR5+1+X/rlevDvG8g4YHYUhU3OJiJhB3ihmGytDyN5PbLeyWyWmWAAnPgWkKqhsmd2+dEFB6+uEaNvUAkd4I7cydRRvf6YFQWkuMIdwV38PufRbOflqSEgomzJoGPEQ/ig6h12/RygaI7irSRBwnqFPbzCnIpRxBRJzmhHT5YQ0uJLdYfvg0pJTusqiUrzq2X8D0vheeR7O2CqOKMahDkh4QL4ol2gmj3CDGrvNBuyld+xnRuiQbqjokIVicVtLLHnt13Ibo1md+tJK6RuuTwAsDp0xLk5Mo8lApwabAnBirQNjjkdFdXbhUfXuphuUe7kj8Wli+MPkUmczqgrIL4zdbXEFrWESq7jmoDKm8OCji2uaDNJdTG5XiemKhkN8OGlB33Qcpfhm+tlCXc12q0jO8DDlYO1nwQm+LULCwrnUJOUsQhqQjMD7VyIqQ=
-  skip-cleanup: true
-  local-dir: _site
-  target_branch: gh-pages
-  on:
-    branch: master
+  - provider: pages
+    github-token:
+      secure: a9AQs1clz+s6ozVS9ET1gTBi6TdmkogViUmMOyp6g2KDxQgl7BoteKs7Cp3vFURWgyvRMj0qmanxCJ1rSxjF8ebrKcGzqZR1lp+EHFCJ6bisNY3BVrWZNLr6PuPNCul+iHOVYKRVzft2f3FN0mmdFrRJaVlrIlghUzr9Iv1QgLjaYMVQYUlJDsUr8rcTnDKZHkYPOiEVIvXtUvnUWs58C8CfWkvBCQ7+yMzIN56f1XvexGOad5m3fFjtAE/ofpJ3e7Fd+wD9dLcQWThcMAszKBdVEqZPziErjKIhZjH2uIkywQ+0Fh0X6SODEwn4ZP6LT17+YKNclwldj5gQoDDqOoJ7gBSS4YbsEJB6U4RiFmPNEgPsAks8ZRXkS6vLQtMaauYbkXYSTgVmo3idyeu2LlsWRwhHLVK0sA7QTHX7dzGhrDte4j9AOCnZXl51uHWnG7w9Tv5djx9enW5iDNUjDr6nxw5U0dPJBflibx3dDxlMnctz4wMl6bS5qqUKi3GDdxV6Rl++Dg5AgESQ4nBpwfsWZ8AGa62ojo+hFNYtxCv2SCupmHrDasOH8/EGNXevhsZVQCVzkvq6B8sK1Jx/0g1qkcdKAFSvy8wOA/s4ODf6HvUxR1POJFq6un7qYl/cvLbWgQhPv5RqZIFwsDxFDvNWbOX3lX5wCoIduDAnHr4=
+    skip-cleanup: true
+    local-dir: _site
+    target_branch: gh-pages
+    on:
+      branch: master
+  - provider: releases
+    api_key:
+      secure: a9AQs1clz+s6ozVS9ET1gTBi6TdmkogViUmMOyp6g2KDxQgl7BoteKs7Cp3vFURWgyvRMj0qmanxCJ1rSxjF8ebrKcGzqZR1lp+EHFCJ6bisNY3BVrWZNLr6PuPNCul+iHOVYKRVzft2f3FN0mmdFrRJaVlrIlghUzr9Iv1QgLjaYMVQYUlJDsUr8rcTnDKZHkYPOiEVIvXtUvnUWs58C8CfWkvBCQ7+yMzIN56f1XvexGOad5m3fFjtAE/ofpJ3e7Fd+wD9dLcQWThcMAszKBdVEqZPziErjKIhZjH2uIkywQ+0Fh0X6SODEwn4ZP6LT17+YKNclwldj5gQoDDqOoJ7gBSS4YbsEJB6U4RiFmPNEgPsAks8ZRXkS6vLQtMaauYbkXYSTgVmo3idyeu2LlsWRwhHLVK0sA7QTHX7dzGhrDte4j9AOCnZXl51uHWnG7w9Tv5djx9enW5iDNUjDr6nxw5U0dPJBflibx3dDxlMnctz4wMl6bS5qqUKi3GDdxV6Rl++Dg5AgESQ4nBpwfsWZ8AGa62ojo+hFNYtxCv2SCupmHrDasOH8/EGNXevhsZVQCVzkvq6B8sK1Jx/0g1qkcdKAFSvy8wOA/s4ODf6HvUxR1POJFq6un7qYl/cvLbWgQhPv5RqZIFwsDxFDvNWbOX3lX5wCoIduDAnHr4=
+    skip_cleanup: true
+    file:
+      - _ebook/cyborg-classmate.epub
+      - _ebook/cyborg-classmate.mobi
+    on:
+      tags: true
