@@ -20,6 +20,7 @@ gem 'jekyll-theme-fuji', git: 'https://github.com/fuji-nakahara/jekyll-theme-fuj
 group :jekyll_plugins do
   gem 'jekyll-fuji_markdown'
   gem 'jekyll-build-ebook'
+  gem 'jekyll-deploy-shosetsu'
 end
 
 group :test do

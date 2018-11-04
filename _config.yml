@@ -65,3 +65,7 @@ twitter:
 ebook:
   file_name: cyborg-classmate
   page_progression_direction: rtl
+
+# Deploy settings
+kakuyomu:
+  work_id: 1177354054887430692
