@@ -18,7 +18,7 @@ description: ぼくがサイボーグのクラスメイト「ケイ」と過ご�
 author: フジ・ナカハラ
 baseurl: /cyborg-classmate # the subpath of your site, e.g. /blog
 url: https://fuji-nakahara.github.io # the base hostname & protocol for your site, e.g. http://example.com
-version: v1.0.0
+version: v1.0.1
 timezone: Asia/Tokyo
 lang: ja_JP
 
