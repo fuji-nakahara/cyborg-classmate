@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "preset-fuji": {
+      "ja-no-mixed-period": false
+    }
+  }
+}
