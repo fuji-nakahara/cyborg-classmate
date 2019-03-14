@@ -17,7 +17,7 @@ title: サイボーグ・クラスメイト
 description: ぼくがサイボーグのクラスメイト「ケイ」と過ごした1ヶ月間
 author: フジ・ナカハラ
 baseurl: /cyborg-classmate # the subpath of your site, e.g. /blog
-url: https://fuji-nakahara.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: https://fuji-nakahara.page # the base hostname & protocol for your site, e.g. http://example.com
 version: v1.0.1
 timezone: Asia/Tokyo
 lang: ja_JP
@@ -48,7 +48,7 @@ defaults:
       layout: novel
 
 # Theme settings
-homepage: https://fuji-nakahara.github.io/
+homepage: https://fuji-nakahara.page/
 repository: fuji-nakahara/cyborg-classmate
 google_analytics: UA-118273401-1
 show_ebooks_from_github_releases: true
